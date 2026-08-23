@@ -2,20 +2,30 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
 }
+.header {
+    background: rgb(207, 111, 111);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+}
 
 .hero {
-  background-color: beige;
   text-align: left;
-  padding: 60px 120px;
+  padding: 60px 0px;
 }
+
+.container {
+  max-width: 1200px;
+  padding: 0 120px;
+  margin: 0 auto;
+}
+
 .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    background-color: white;
-  }
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background-color: white;
+}
 img {
   border-radius: 50%;
 }
@@ -46,19 +56,22 @@ a {
 }
 
 .projects{
-  background-color: #f1f1f1;
   text-align: left;
-  padding: 60px 120px;
+  padding: 60px 0px;
+}
+
+.projects-row {
+  display: flex;
+  gap: 40px;
 }
 
 .project-card {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 40px;
+  padding: 24px;
   display: flex;
-  gap: 40px;
+  flex: 1;
+  gap: 24px;
   align-items: center;
-  background-color: white;
+  background-color: rgb(227, 156, 156);
   border-radius: 16px;
 }
 
@@ -75,9 +88,40 @@ h3 {
 
 .project-card-content {
   display: grid;
+  background-color:aquamarine;
   gap: 8px;
 }
 
 .project-card-img {
   border-radius: 8px;
+}
+
+.project-card-button {
+  margin: 0 auto;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+li {
+  list-style: square;
+}
+
+.about {
+  text-align: left;
+  padding: 60px 0px;
+}
+
+.skills {
+  text-align: left;
+  padding: 60px 0px;
+}
+
+.concepts {
+  text-align: left;
+  padding: 60px 0px;
+}
+
+.contact {
+  text-align: left;
+  padding: 60px 0px;
 }

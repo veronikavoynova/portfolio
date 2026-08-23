@@ -7,18 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
 
+<header class="header">
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <img src="images/logo.jpg" alt="Вероника Войнова">
+      </a>
+      <nav class="navigation">
+        <ul>
+        <li><a href="#" class="menu-link">Обо мне</a></li>
+        <li><a href="#" class="menu-link">Скилы</a></li>
+        <li><a href="#" class="menu-link">Проекты</a></li>
+        <li><a href="#" class="menu-link">Концепты</a></li>
+        <li><a href="#" class="menu-link">Опыт</a></li>
+        <li><a href="#" class="menu-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="button button-secondary" name="cv">Резюме</button>
+        <button class="button button-primary" name="call">Связаться</button>
+      </div>
+    </div>
 </header>
+
 <main>
 
   <section class="hero">
-    <div class="hero-container">
+    <div class="container hero-container">
       <div class="hero-content">
         <h1>Привет! Меня зовут Вероника. Я UX/UI-дизайнер с опытом 4 года.</h1>
-        <p>Делаю дизайн-системы и сложные B2B-продукты.</p>
+        <p>Специализируюсь на проектировании B2B интерфейсов и всей душой люблю работать с дизайн-системами.</p>
         <a href="#projects" class="hero-button">Посмотреть проекты</a>
       </div>
+      <!--вероятно фото можно поместить вообще в самом верху-->
       <div class="hero-photo">
         <img src="images/avatar.jpg" alt="Мое фото">
       </div>
@@ -26,32 +47,83 @@
   </section>
 
   <section class="about">
-    <h2></h2>
+    <div class="container">
+      <h2>Обо мне</h2>
+    </div>
+    
   </section>
+
   <section class="skills">
-    <h2></h2>
+    <div class="container">
+      <h2>Что я умею</h2>
+    </div>
+    
   </section>
+
   <section class="projects">
+    <div class="container">
     <h2>Мои проекты</h2>
-    <div class="project-card">
-      <div class="project-card-img-area">
+    <div class="projects-row">
+      <div class="project-card">
         <img src="images/prjctimg1.jpg" alt="Фото первого проекта" class="project-card-img">
+        <div class="project-card-content">
+          <h3>Первый проект</h3>
+          <p class="project-card-description">Краткое описание проекта</p>
+          <button href="#" class="project-card-button">Читать кейс</button>
+        </div>
       </div>
-      <div class="project-card-content">
-        <h3>Первый проект</h3>
-        <p class="project-card-description">Краткое описание проекта</p>
-        <button href="#" class="project-card-button">Читать кейс</button>
+      <div class="project-card">
+        <img src="images/prjctimg2.jpg" alt="Фото второго проекта" class="project-card-img">
+        <div class="project-card-content">
+          <h3>Второй проект</h3>
+          <p class="project-card-description">Краткое описание проекта</p>
+          <button href="#" class="project-card-button">Читать кейс</button>
+        </div>
       </div>
-      
+    </div>
+    </div>
     </div>
   </section>
-  <section class="experience">
-    <h2></h2>
+
+  <section class="concepts">
+    <div class="container">
+    <h2>Концепты</h2>
+    <div class="concept-row">
+      <div class="concept-card">
+        <img src="images/conceptimg1.jpg" alt="Фото первого концепта" class="concept-card-img">
+      </div>
+    </div>
+    </div>
   </section>
+
+  <section class="experience">
+    <div class="container">
+    <h2>Опыт работы</h2>
+    <div>
+      <h3>Название места работы</h3>
+      <p class="exp-timer">июнь 2024 — настоящее время</p>
+      <p class="exp-description">
+        <ul class="exp-description">
+          <li>редизайн тендеров</li>
+          <li>проектирование дашборда</li>
+          <li>проведение исследований для CJM</li>
+        </ul>
+      </p>
+    </div>
+    </div>
+  </section>
+
   <section class="contact">
-    <h2></h2>
-  </section></main>
-<footer></footer>
+    <div class="container">
+    <h2>Контакты</h2>
+    </div>
+  </section>
+</main>
+
+<footer>
+
+</footer>
+
 <script src="script.js">
 
 </script>
