@@ -63,57 +63,375 @@
 
   <section class="projects" id="projects">
     <div class="container">
-    <h2>Selected Work</h2>
-    <div class="projects-row">
-      <div class="project-card">
-        <img src="images/prjctimg1.jpg" alt="Фото первого проекта" class="project-card-img">
-        <div class="project-card-content">
-          <h3>Первый проект</h3>
-          <p class="project-card-description">Краткое описание проекта</p>
-          <a href="#" class="project-card-button">Читать кейс</a>
-        </div>
+      <h2 class="projects-heading">Кейсы</h2>
+      <div class="projects-row">
+        <article class="project-card">
+          <header class="project-card-header">
+            <p class="project-card-index"><span>01</span><span>/ Кейс</span></p>
+            <div class="project-card-content">
+              <h3 class="project-card-title">Первый проект</h3>
+              <p class="project-card-description">Краткое описание проекта</p>
+              <p class="project-card-meta">UX/UI</p>
+            </div>
+          </header>
+          <a href="#" class="project-card-media" aria-label="Читать кейс: Первый проект">
+            <img src="images/prjctimg1.jpg" alt="Фото первого проекта" class="project-card-img">
+          </a>
+          <footer class="project-card-footer">
+            <a href="#" class="project-card-button">Смотреть кейс <span aria-hidden="true">→</span></a>
+          </footer>
+        </article>
+
+        <article class="project-card">
+          <header class="project-card-header">
+            <p class="project-card-index"><span>02</span><span>/ Кейс</span></p>
+            <div class="project-card-content">
+              <h3 class="project-card-title">Второй проект</h3>
+              <p class="project-card-description">Краткое описание проекта</p>
+              <p class="project-card-meta">UX/UI</p>
+            </div>
+          </header>
+          <a href="#" class="project-card-media" aria-label="Читать кейс: Второй проект">
+            <img src="images/prjctimg2.jpg" alt="Фото второго проекта" class="project-card-img">
+          </a>
+          <footer class="project-card-footer">
+            <a href="#" class="project-card-button">Смотреть кейс <span aria-hidden="true">→</span></a>
+          </footer>
+        </article>
       </div>
-      <div class="project-card">
-        <img src="images/prjctimg2.jpg" alt="Фото второго проекта" class="project-card-img">
-        <div class="project-card-content">
-          <h3>Второй проект</h3>
-          <p class="project-card-description">Краткое описание проекта</p>
-          <a href="#" class="project-card-button">Читать кейс</a>
-        </div>
-      </div>
-    </div>
     </div>
   </section>
 
   <section class="concepts" id="concepts">
     <div class="container">
-    <h2>Концепты</h2>
-    <div class="concept-row">
-      <div class="concept-card">
-        <img src="images/conceptimg1.jpg" alt="Фото первого концепта" class="concept-card-img">
+      <header class="concepts-header">
+        <h2 class="concepts-heading">Концепты</h2>
+        <p class="concepts-description">UI-эксперименты, визуальные упражнения и небольшие проекты без полноценной кейсовой истории.</p>
+      </header>
+      <div class="concept-row">
+        <article class="concept-card">
+          <!-- Для формата «до/после» очистите data-image и заполните data-image-before и data-image-after. -->
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 01"
+            data-description="Короткое описание концепта 01."
+            data-image="images/conceptimg1.jpg"
+            data-image-alt="Концепт 01"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg1.jpg" alt="Концепт 01" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 01</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 02"
+            data-description="Короткое описание концепта 02."
+            data-image="images/conceptimg2.jpg"
+            data-image-alt="Концепт 02"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg2.jpg" alt="Концепт 02" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 02</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 03"
+            data-description="Короткое описание концепта 03."
+            data-image="images/conceptimg3.jpg"
+            data-image-alt="Концепт 03"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg3.jpg" alt="Концепт 03" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 03</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 04"
+            data-description="Короткое описание концепта 04."
+            data-image="images/conceptimg4.jpg"
+            data-image-alt="Концепт 04"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg4.jpg" alt="Концепт 04" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 04</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 05"
+            data-description="Короткое описание концепта 05."
+            data-image="images/conceptimg5.jpg"
+            data-image-alt="Концепт 05"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg5.jpg" alt="Концепт 05" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 05</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 06"
+            data-description="Короткое описание концепта 06."
+            data-image="images/conceptimg6.jpg"
+            data-image-alt="Концепт 06"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg6.jpg" alt="Концепт 06" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 06</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 07"
+            data-description="Короткое описание концепта 07."
+            data-image="images/conceptimg7.jpg"
+            data-image-alt="Концепт 07"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg7.jpg" alt="Концепт 07" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 07</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 08"
+            data-description="Короткое описание концепта 08."
+            data-image="images/conceptimg8.jpg"
+            data-image-alt="Концепт 08"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg8.jpg" alt="Концепт 08" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 08</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="concept-card">
+          <button class="concept-card-trigger" type="button"
+            data-title="Концепт 09"
+            data-description="Короткое описание концепта 09."
+            data-image="images/conceptimg9.jpg"
+            data-image-alt="Концепт 09"
+            data-image-before=""
+            data-image-after="">
+            <span class="concept-card-media">
+              <img src="images/conceptimg9.jpg" alt="Концепт 09" class="concept-card-img">
+            </span>
+            <span class="concept-card-content">
+              <span class="concept-card-title">Концепт 09</span>
+              <span class="concept-card-type">UI-эксперимент</span>
+            </span>
+          </button>
+        </article>
       </div>
     </div>
+
+    <div class="concept-lightbox" hidden>
+      <div class="concept-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="concept-lightbox-title" tabindex="-1">
+        <button class="concept-lightbox-close" type="button" aria-label="Закрыть увеличенный просмотр">×</button>
+        <header class="concept-lightbox-header">
+          <h2 class="concept-lightbox-title" id="concept-lightbox-title"></h2>
+          <p class="concept-lightbox-description"></p>
+        </header>
+        <div class="concept-lightbox-visuals"></div>
+      </div>
     </div>
   </section>
 
   <section class="experience" id="experience">
     <div class="container">
-    <h2>Опыт работы</h2>
-    <div>
-      <h3>Название места работы</h3>
-      <p class="exp-timer">июнь 2024 — настоящее время</p>
-      <ul class="exp-description">
-        <li>редизайн тендеров</li>
-        <li>проектирование дашборда</li>
-        <li>проведение исследований для CJM</li>
-      </ul>
-    </div>
+      <h2 class="experience-heading">Опыт</h2>
+
+      <div class="experience-list">
+        <article class="experience-item is-open">
+          <button class="experience-trigger" type="button" id="experience-trigger-1" aria-expanded="true" aria-controls="experience-panel-1">
+            <span class="experience-period">Июнь 2024 — настоящее время</span>
+            <span class="experience-company">ООО Логинет рус</span>
+            <span class="experience-descriptor">B2B SaaS</span>
+            <span class="experience-icon" aria-hidden="true">−</span>
+          </button>
+          <div class="experience-panel" id="experience-panel-1" role="region" aria-labelledby="experience-trigger-1">
+            <div class="experience-panel-inner">
+              <h3 class="experience-role">Проектировщик пользовательских интерфейсов</h3>
+              <div class="experience-meta">
+                <p>Санкт-Петербург</p>
+                <p>B2B SaaS · логистика · сложные корпоративные интерфейсы</p>
+              </div>
+              <ul class="experience-tasks">
+                <li>закрыла более 190 рутинных задач (добавление полей в формы, разработка микросервисов, отрисовка новых иконок и т.п.)</li>
+                <li>разобрала на атомы сервис по проведению тендеров и провела в нем редизайн для улучшения флоу, исключив из него взаимодействие с excel таблицами</li>
+                <li>спроектировала дашборд как стартовый экран на платформе</li>
+                <li>сделала полный рефакторинг внутренней дизайн-системы</li>
+                <li>провела дизайн-ревью всего портала (более 70 подразделов) для запуска в прод нового фронта</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <button class="experience-trigger" type="button" id="experience-trigger-2" aria-expanded="false" aria-controls="experience-panel-2">
+            <span class="experience-period">Декабрь 2023 — май 2024</span>
+            <span class="experience-company">Проектная занятость</span>
+            <span class="experience-descriptor">B2C / Mobile / E-commerce</span>
+            <span class="experience-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="experience-panel" id="experience-panel-2" role="region" aria-labelledby="experience-trigger-2" hidden>
+            <div class="experience-panel-inner">
+              <div class="experience-project">
+                <header class="experience-project-header">
+                  <h3 class="experience-project-title">ООО Апартментсистемс</h3>
+                  <p class="experience-project-period">Февраль 2024 — май 2024</p>
+                </header>
+                <p class="experience-project-role">Дизайнер мобильных приложений</p>
+                <ul class="experience-tasks">
+                  <li>спроектировала дизайн новых разделов мобильного приложения</li>
+                  <li>провела редизайн существующих разделов приложения</li>
+                  <li>собрала все макеты в детализированный флоу</li>
+                  <li>работала в тесной связке с фронт-разработчиками</li>
+                </ul>
+              </div>
+
+              <div class="experience-project">
+                <header class="experience-project-header">
+                  <h3 class="experience-project-title">AppCake</h3>
+                  <p class="experience-project-period">Декабрь 2023 — январь 2024</p>
+                </header>
+                <p class="experience-project-role">UX/UI-дизайнер</p>
+                <ul class="experience-tasks">
+                  <li>Сделала редизайн 6 приложений для iOS и 1 для Android — создавала дизайн-концепции, работала с компонентами и стилями, адаптировала дизайн под планшет</li>
+                  <li>Собрала полный пакет графики для двух проектов</li>
+                  <li>Создавала большой пак пиксельных персонажей для игр</li>
+                  <li>Создала более 40 айтемов одежды для персонажей одной известной детской игры — для приложения, в котором есть skin editor</li>
+                  <li>Внесла множество правок в текущие проекты по приложениям для iOS</li>
+                </ul>
+              </div>
+
+              <div class="experience-project">
+                <header class="experience-project-header">
+                  <h3 class="experience-project-title">Лотос трикотаж</h3>
+                  <p class="experience-project-period">Октябрь 2023 — ноябрь 2023</p>
+                </header>
+                <p class="experience-project-role">UX/UI-дизайнер (проектная работа)</p>
+                <ul class="experience-tasks">
+                  <li>Сделала полный редизайн сайта интернет-магазина по продаже трикотажной продукции в соответствии с ТЗ клиента</li>
+                  <li>Адаптировала дизайн интернет-магазина под 5 разрешений экранов и подготовила все макеты к верстке</li>
+                </ul>
+              </div>
+
+              <div class="experience-project">
+                <header class="experience-project-header">
+                  <h3 class="experience-project-title">Дизайн-студия Елены Чайкиной</h3>
+                  <p class="experience-project-period">Июль 2022 — август 2022</p>
+                </header>
+                <p class="experience-project-role">Дизайнер</p>
+                <ul class="experience-tasks">
+                  <li>Сверстала сайт на Тильде</li>
+                  <li>Спроектировала дизайн сайта Необслуживаемой блокировки в Figma в соответствии с ТЗ</li>
+                  <li>Оформила две группы во ВКонтакте по ТЗ</li>
+                  <li>Написала несколько информационных постов о дизайне</li>
+                  <li>Изучала вопросы продвижения в соц. сетях</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <button class="experience-trigger" type="button" id="experience-trigger-3" aria-expanded="false" aria-controls="experience-panel-3">
+            <span class="experience-period">Август 2022 — сентябрь 2023</span>
+            <span class="experience-company">ООО Айти-Студио</span>
+            <span class="experience-descriptor">Агентство</span>
+            <span class="experience-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="experience-panel" id="experience-panel-3" role="region" aria-labelledby="experience-trigger-3" hidden>
+            <div class="experience-panel-inner">
+              <h3 class="experience-role">Web-дизайнер</h3>
+              <div class="experience-meta">
+                <p>Иваново</p>
+                <p>Web · сайты · лендинги · рекламные материалы</p>
+              </div>
+              <ul class="experience-tasks">
+                <li>Создала несколько прототипов сайтов: сайт-маркетплейс упаковки А-Пакет, сайт ФК Квант, сайт-сервис для общения с врачом (его не выпустили)</li>
+                <li>Создала 3 лендинга и один полноценный многостраничный сайт</li>
+                <li>Разработала дизайн лендинга на основе брендбука клиента</li>
+                <li>Провела несколько первичных аудитов сайтов клиентов</li>
+                <li>Создавала баннеры для сайтов и соцсетей</li>
+                <li>Создавала креативы для рекламных кампаний</li>
+                <li>Дорабатывала дизайн существующих сайтов</li>
+                <li>Создала несколько презентаций для внутренних нужд компании</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="about" id="about">
     <div class="container">
-      <h2>Обо мне</h2>
+      <h2 class="about-heading">Обо мне</h2>
+      <div class="about-layout">
+        <p class="about-text">Мне нравятся задачи, в которых сначала непонятно вообще ничего: сложные сценарии, большие объёмы данных, таблицы и системы с множеством взаимосвязей. Люблю раскладывать сложность на понятную структуру и доводить её до аккуратного интерфейса. Особенно интересны B2B-продукты и задачи на стыке UX, UI и системного мышления.</p>
+
+        <aside class="about-focus" aria-label="Профессиональный фокус">
+          <p class="about-focus-label"><span aria-hidden="true"></span>Фокус</p>
+          <ul class="about-focus-list">
+            <li>Product design</li>
+            <li>B2B</li>
+            <li>Сложные сценарии</li>
+            <li>Design systems</li>
+            <li>UI</li>
+          </ul>
+        </aside>
+      </div>
     </div>
 
   </section>
@@ -127,21 +445,66 @@
   </section>
   -->
 
-  <section id="off-screen">
+  <section class="off-screen" id="off-screen">
     <div class="container">
-      <h2>Off Screen</h2>
+      <h2 class="off-screen-heading">Вне работы</h2>
+      <div class="off-screen-grid">
+        <article class="off-screen-item">
+          <p class="off-screen-number">01</p>
+          <h3 class="off-screen-title">Пилон</h3>
+          <p class="off-screen-description">Спорт, сила и немного упрямства.</p>
+        </article>
+
+        <article class="off-screen-item">
+          <p class="off-screen-number">02</p>
+          <h3 class="off-screen-title">Игры</h3>
+          <p class="off-screen-description">Люблю сюжетные игры и большие миры.</p>
+        </article>
+
+        <article class="off-screen-item">
+          <p class="off-screen-number">03</p>
+          <h3 class="off-screen-title">Пишу</h3>
+          <p class="off-screen-description">Веду заметки и пишу о дизайне, работе и наблюдениях.</p>
+        </article>
+
+        <article class="off-screen-item">
+          <p class="off-screen-number">04</p>
+          <h3 class="off-screen-title">Фронтенд</h3>
+          <p class="off-screen-description">Изучаю HTML, CSS и JavaScript и верстаю это портфолио сама.</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="container">
-    <h2>Контакты</h2>
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <h2 class="contact-heading">Связаться со мной</h2>
+          <p class="contact-description">Если хотите обсудить проект, работу или сотрудничество — напишите мне.</p>
+        </div>
+
+        <address class="contact-links">
+          <a class="contact-link" href="https://t.me/veronika_voynova" target="_blank" rel="noopener noreferrer">
+            <span class="contact-link-label">Telegram <span aria-hidden="true">↗</span></span>
+            <span class="contact-link-value">@veronika_voynova</span>
+          </a>
+
+          <a class="contact-link" href="mailto:daveroni@inbox.ru">
+            <span class="contact-link-label">Почта <span aria-hidden="true">↗</span></span>
+            <span class="contact-link-value">daveroni@inbox.ru</span>
+          </a>
+        </address>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-
+<footer class="site-footer">
+  <div class="container site-footer-content">
+    <p>© 2026 Вероника Войнова</p>
+    <p class="site-footer-note">Сайт спроектирован и сверстан мной</p>
+  </div>
 </footer>
 
 <script src="script.js">
