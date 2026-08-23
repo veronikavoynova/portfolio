@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вероника Войнова</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
     <div class="container header-container">
-      <a href="/" class="logo">
-        <img src="images/logo.jpg" alt="Вероника Войнова">
-      </a>
+      <a href="./" class="logo">Вероника Войнова</a>
       <nav class="navigation">
         <ul>
         <li><a href="#projects" class="menu-link">Work</a></li>
@@ -22,10 +23,6 @@
         <li><a href="#contact" class="menu-link">Contact</a></li>
         </ul>
       </nav>
-      <div class="actions">
-        <button class="button button-secondary" name="cv">Резюме</button>
-        <button class="button button-primary" name="call">Связаться</button>
-      </div>
     </div>
 </header>
 
@@ -34,15 +31,34 @@
   <section class="hero">
     <div class="container hero-container">
       <div class="hero-content">
-        <h1>Привет! Меня зовут Вероника. Я UX/UI-дизайнер с опытом 4 года.</h1>
-        <p>Специализируюсь на проектировании B2B интерфейсов и всей душой люблю работать с дизайн-системами.</p>
-        <a href="#projects" class="hero-button">Посмотреть проекты</a>
+        <p class="hero-kicker"><span aria-hidden="true"></span>Product design · B2B</p>
+        <h1 class="hero-title">Product<br>Designer</h1>
+        <div class="hero-intro">
+          <p class="hero-name">Вероника Войнова</p>
+          <p class="hero-description">Привет! Я UX/UI-дизайнер с опытом 4 года. Специализируюсь на проектировании B2B интерфейсов и всей душой люблю работать с дизайн-системами.</p>
+          <a href="#projects" class="hero-button">Selected Work <span aria-hidden="true">↘</span></a>
+        </div>
       </div>
-      <!--вероятно фото можно поместить вообще в самом верху-->
-      <div class="hero-photo">
-        <img src="images/avatar.jpg" alt="Мое фото">
+      <aside class="hero-aside" aria-label="Специализация">
+        <div class="hero-photo">
+          <img class="hero-photo-img" src="images/avatar.jpg" alt="Вероника Войнова">
+        </div>
+        <dl class="hero-meta">
+          <div>
+            <dt>Focus</dt>
+            <dd>B2B-интерфейсы</dd>
+          </div>
+          <div>
+            <dt>Expertise</dt>
+            <dd>Дизайн-системы</dd>
+          </div>
+          <div>
+            <dt>Experience</dt>
+            <dd>4 года</dd>
+          </div>
+        </dl>
+      </aside>
       </div>
-    </div>
   </section>
 
   <section class="projects" id="projects">
