@@ -7,20 +7,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
 <header class="header">
     <div class="container header-container">
       <a href="./" class="logo">Вероника Войнова</a>
-      <nav class="navigation">
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="navigation" id="main-navigation" aria-label="Основная навигация">
         <ul>
-        <li><a href="#projects" class="menu-link">Work</a></li>
-        <li><a href="#concepts" class="menu-link">Concepts</a></li>
-        <li><a href="#experience" class="menu-link">Experience</a></li>
-        <li><a href="#about" class="menu-link">About</a></li>
-        <li><a href="#contact" class="menu-link">Contact</a></li>
+        <li><a href="#projects" class="menu-link">Кейсы</a></li>
+        <li><a href="#concepts" class="menu-link">Концепты</a></li>
+        <li><a href="#experience" class="menu-link">Опыт</a></li>
+        <li><a href="#about" class="menu-link">Обо мне</a></li>
+        <li><a href="#contact" class="menu-link">Связаться со мной</a></li>
         </ul>
       </nav>
     </div>
@@ -74,11 +80,11 @@
               <p class="project-card-meta">UX/UI</p>
             </div>
           </header>
-          <a href="#" class="project-card-media" aria-label="Читать кейс: Первый проект">
+          <a href="./cases/dashboard/" class="project-card-media" aria-label="Смотреть кейс: Первый проект">
             <img src="images/prjctimg1.jpg" alt="Фото первого проекта" class="project-card-img">
           </a>
           <footer class="project-card-footer">
-            <a href="#" class="project-card-button">Смотреть кейс <span aria-hidden="true">→</span></a>
+            <a href="./cases/dashboard/" class="project-card-button">Смотреть кейс <span aria-hidden="true">→</span></a>
           </footer>
         </article>
 
@@ -436,15 +442,6 @@
 
   </section>
 
-  <!-- Временная секция: позже удалить или интегрировать в About/Experience.
-  <section class="skills" id="skills">
-    <div class="container">
-      <h2>Что я умею</h2>
-    </div>
-
-  </section>
-  -->
-
   <section class="off-screen" id="off-screen">
     <div class="container">
       <h2 class="off-screen-heading">Вне работы</h2>
@@ -503,13 +500,12 @@
 <footer class="site-footer">
   <div class="container site-footer-content">
     <p>© 2026 Вероника Войнова</p>
-    <p class="site-footer-note">Сайт спроектирован и сверстан мной</p>
+    <p>Сайт спроектирован и сверстан мной</p>
   </div>
 </footer>
 
-<script src="script.js">
-
-</script>
+<script src="js/navigation.js"></script>
+<script src="js/home.js"></script>
 
 </body>
 </html>

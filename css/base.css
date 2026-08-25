@@ -1,0 +1,81 @@
+/* Global tokens, reset, typography and shared layout primitives. */
+
+:root {
+  --color-bg: #F5F5F2;
+  --color-text: #111111;
+  --color-text-secondary: #6F6F6B;
+  --color-border: #D9D9D4;
+  --color-accent: #B7F52A;
+  --container-width: 1280px;
+  --page-gutter: clamp(20px, 5vw, 72px);
+  --header-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Commissioner", Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(calc(100% - (2 * var(--page-gutter))), var(--container-width));
+  margin-inline: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--color-text);
+  font-size: 20px;
+}
+
+h3 {
+  margin-bottom: 20px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  :root {
+      --header-height: 64px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+      scroll-behavior: auto;
+    }
+
+  *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+    }
+}
+
