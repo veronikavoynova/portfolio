@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/resume.css">
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    })();
+  </script>
 </head>
 <body>
   <div data-site-header data-root="../" data-page="resume"></div>
