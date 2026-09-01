@@ -1,3 +1,10 @@
+const experienceSection = document.querySelector(".experience");
+const projectsSection = document.querySelector(".projects");
+
+if (experienceSection && projectsSection) {
+  projectsSection.before(experienceSection);
+}
+
 const conceptLightbox = document.querySelector(".concept-lightbox");
 
 if (conceptLightbox) {
@@ -184,4 +191,3 @@ if (experienceItems.length) {
   setInitialExperienceState();
   mobileExperience.addEventListener("change", setInitialExperienceState);
 }
-

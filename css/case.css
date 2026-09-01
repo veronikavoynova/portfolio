@@ -230,7 +230,7 @@
   display: grid;
   place-items: center;
   padding: clamp(20px, 4vw, 56px);
-  background: rgb(0 0 0 / 76%);
+  background: var(--color-overlay);
 }
 
 .case-lightbox-dialog {
@@ -238,7 +238,7 @@
   max-height: calc(100svh - clamp(40px, 8vw, 112px));
   overflow: auto;
   padding: clamp(20px, 3vw, 40px);
-  background: var(--color-bg);
+  background: var(--color-surface);
   outline: none;
 }
 
@@ -398,4 +398,3 @@
     height: 42px;
   }
 }
-

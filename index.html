@@ -10,23 +10,24 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/home.css">
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    })();
+  </script>
 </head>
 <body>
 
 <header class="header">
     <div class="container header-container">
       <a href="./" class="logo">Вероника Войнова</a>
-      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-      <nav class="navigation" id="main-navigation" aria-label="Основная навигация">
+      <nav class="navigation" aria-label="Внешние ссылки и настройки">
         <ul>
-        <li><a href="#projects" class="menu-link">Кейсы</a></li>
-        <li><a href="#concepts" class="menu-link">Концепты</a></li>
-        <li><a href="#experience" class="menu-link">Опыт</a></li>
-        <li><a href="#about" class="menu-link">Обо мне</a></li>
-        <li><a href="#contact" class="menu-link">Связаться со мной</a></li>
+        <li><a href="assets/documents/veronika-voynova-resume.pdf" class="menu-link resume-link" download aria-label="Скачать резюме Вероники Войновой">Резюме <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg></a></li>
+        <li><a href="https://t.me/veronika_voynova" class="menu-link" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+        <li><button class="theme-toggle" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span></button></li>
         </ul>
       </nav>
     </div>
@@ -36,35 +37,14 @@
 
   <section class="hero">
     <div class="container hero-container">
+      <figure class="hero-photo">
+        <img class="hero-photo-img" src="assets/images/profile/avatar.png" alt="Вероника Войнова">
+      </figure>
       <div class="hero-content">
-        <p class="hero-kicker"><span aria-hidden="true"></span>Product design · B2B</p>
-        <h1 class="hero-title">Product<br>Designer</h1>
-        <div class="hero-intro">
-          <p class="hero-name">Вероника Войнова</p>
-          <p class="hero-description">Привет! Я UX/UI-дизайнер с опытом 4 года. Специализируюсь на проектировании B2B интерфейсов и всей душой люблю работать с дизайн-системами.</p>
-          <a href="#projects" class="hero-button">Selected Work <span aria-hidden="true">↘</span></a>
-        </div>
+        <h1 class="hero-title">Продуктовый дизайнер с&nbsp;экспертизой в&nbsp;B2B&nbsp;SaaS</h1>
+        <p class="hero-description">Люблю работать со сложными высоконагруженными интерфейсами. Есть опыт в рефакторинге дизайн-системы, наставничестве дизайнера-джуна, написании компонентов на React и понимание работы фронтенда (HTML/CSS/JS). Запустила в продукте фичу, которая исключила потребность пользователей в excel-таблицах и получила CSI &gt; 90% по ней через месяц после релиза.</p>
       </div>
-      <aside class="hero-aside" aria-label="Специализация">
-        <div class="hero-photo">
-          <img class="hero-photo-img" src="images/avatar.jpg" alt="Вероника Войнова">
-        </div>
-        <dl class="hero-meta">
-          <div>
-            <dt>Focus</dt>
-            <dd>B2B-интерфейсы</dd>
-          </div>
-          <div>
-            <dt>Expertise</dt>
-            <dd>Дизайн-системы</dd>
-          </div>
-          <div>
-            <dt>Experience</dt>
-            <dd>4 года</dd>
-          </div>
-        </dl>
-      </aside>
-      </div>
+    </div>
   </section>
 
   <section class="projects" id="projects">
@@ -112,7 +92,7 @@
     <div class="container">
       <header class="concepts-header">
         <h2 class="concepts-heading">Концепты</h2>
-        <p class="concepts-description">UI-эксперименты, визуальные упражнения и небольшие проекты без полноценной кейсовой истории.</p>
+        <p class="concepts-description">UI-эксперименты без кейсовой истории</p>
       </header>
       <div class="concept-row">
         <article class="concept-card">
@@ -224,59 +204,6 @@
           </button>
         </article>
 
-        <article class="concept-card">
-          <button class="concept-card-trigger" type="button"
-            data-title="Концепт 07"
-            data-description="Короткое описание концепта 07."
-            data-image="images/conceptimg7.jpg"
-            data-image-alt="Концепт 07"
-            data-image-before=""
-            data-image-after="">
-            <span class="concept-card-media">
-              <img src="images/conceptimg7.jpg" alt="Концепт 07" class="concept-card-img">
-            </span>
-            <span class="concept-card-content">
-              <span class="concept-card-title">Концепт 07</span>
-              <span class="concept-card-type">UI-эксперимент</span>
-            </span>
-          </button>
-        </article>
-
-        <article class="concept-card">
-          <button class="concept-card-trigger" type="button"
-            data-title="Концепт 08"
-            data-description="Короткое описание концепта 08."
-            data-image="images/conceptimg8.jpg"
-            data-image-alt="Концепт 08"
-            data-image-before=""
-            data-image-after="">
-            <span class="concept-card-media">
-              <img src="images/conceptimg8.jpg" alt="Концепт 08" class="concept-card-img">
-            </span>
-            <span class="concept-card-content">
-              <span class="concept-card-title">Концепт 08</span>
-              <span class="concept-card-type">UI-эксперимент</span>
-            </span>
-          </button>
-        </article>
-
-        <article class="concept-card">
-          <button class="concept-card-trigger" type="button"
-            data-title="Концепт 09"
-            data-description="Короткое описание концепта 09."
-            data-image="images/conceptimg9.jpg"
-            data-image-alt="Концепт 09"
-            data-image-before=""
-            data-image-after="">
-            <span class="concept-card-media">
-              <img src="images/conceptimg9.jpg" alt="Концепт 09" class="concept-card-img">
-            </span>
-            <span class="concept-card-content">
-              <span class="concept-card-title">Концепт 09</span>
-              <span class="concept-card-type">UI-эксперимент</span>
-            </span>
-          </button>
-        </article>
       </div>
     </div>
 
@@ -421,6 +348,7 @@
     </div>
   </section>
 
+  <!-- Секция «Обо мне» временно скрыта.
   <section class="about" id="about">
     <div class="container">
       <h2 class="about-heading">Обо мне</h2>
@@ -441,7 +369,9 @@
     </div>
 
   </section>
+  Конец скрытой секции «Обо мне». -->
 
+  <!-- Секция «Вне работы» временно скрыта.
   <section class="off-screen" id="off-screen">
     <div class="container">
       <h2 class="off-screen-heading">Вне работы</h2>
@@ -472,6 +402,7 @@
       </div>
     </div>
   </section>
+  Конец скрытой секции «Вне работы». -->
 
   <section class="contact" id="contact">
     <div class="container">

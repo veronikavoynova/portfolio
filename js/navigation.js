@@ -1,70 +1,21 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const mainNavigation = document.querySelector(".navigation");
+const themeToggle = document.querySelector(".theme-toggle");
 
-if (menuToggle && mainNavigation) {
-  const menuLinks = mainNavigation.querySelectorAll(".menu-link");
-  const mobileNavigation = window.matchMedia("(max-width: 700px)");
+const applyTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
 
-  const closeMenu = (restoreFocus = false) => {
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Открыть меню");
-    mainNavigation.classList.remove("is-open");
-    document.body.classList.remove("menu-open");
+  if (!themeToggle) return;
 
-    if (restoreFocus) {
-      menuToggle.focus();
-    }
-  };
+  const isDark = theme === "dark";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Включить светлую тему" : "Включить тёмную тему");
+};
 
-  const openMenu = () => {
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Закрыть меню");
-    mainNavigation.classList.add("is-open");
-    document.body.classList.add("menu-open");
-    menuLinks[0]?.focus();
-  };
+if (themeToggle) {
+  applyTheme(document.documentElement.dataset.theme || "light");
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem("portfolio-theme", nextTheme);
   });
-
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => closeMenu());
-  });
-
-  document.addEventListener("keydown", (event) => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-    if (!isOpen) {
-      return;
-    }
-
-    if (event.key === "Escape") {
-      closeMenu(true);
-      return;
-    }
-
-    if (event.key === "Tab") {
-      const focusableElements = [menuToggle, ...menuLinks];
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-
-      if (event.shiftKey && document.activeElement === firstElement) {
-        event.preventDefault();
-        lastElement.focus();
-      } else if (!event.shiftKey && document.activeElement === lastElement) {
-        event.preventDefault();
-        firstElement.focus();
-      }
-    }
-  });
-
-  mobileNavigation.addEventListener("change", () => closeMenu());
 }
-

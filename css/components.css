@@ -4,8 +4,9 @@
   position: sticky;
   z-index: 10;
   top: 0;
-  background: var(--color-bg);
+  background: var(--color-header-bg);
   border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
 }
 
 .header-container {
@@ -44,6 +45,63 @@
   color: var(--color-text-secondary);
   font-size: 13px;
   font-weight: 500;
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resume-link svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 42px;
+  height: 30px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.theme-toggle-track {
+  display: flex;
+  width: 34px;
+  height: 18px;
+  align-items: center;
+  padding: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+}
+
+.theme-toggle-track span {
+  width: 12px;
+  height: 12px;
+  background: var(--color-text);
+  border-radius: 50%;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+[data-theme="dark"] .theme-toggle-track span {
+  background: var(--color-accent);
+  transform: translateX(16px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .menu-link::after {
@@ -266,7 +324,7 @@
   display: grid;
   place-items: center;
   padding: clamp(20px, 4vw, 56px);
-  background: rgb(0 0 0 / 72%);
+  background: var(--color-overlay);
 }
 
 .concept-lightbox-dialog {
@@ -274,7 +332,7 @@
   max-height: calc(100svh - clamp(40px, 8vw, 112px));
   overflow-y: auto;
   padding: clamp(24px, 4vw, 56px);
-  background: var(--color-bg);
+  background: var(--color-surface);
   color: var(--color-text);
   outline: none;
 }
@@ -398,91 +456,18 @@
       padding-block: 0;
     }
 
-  .menu-toggle {
-      position: relative;
-      z-index: 12;
-      display: grid;
-      width: 40px;
-      height: 40px;
-      flex: 0 0 auto;
-      padding: 0;
-      place-content: center;
-      gap: 6px;
-      border: 0;
-      background: transparent;
-      color: var(--color-text);
-      cursor: pointer;
-    }
-
-  .menu-toggle span {
-      display: block;
-      width: 22px;
-      height: 1px;
-      background: currentColor;
-      transition: transform 180ms ease;
-    }
-
-  .menu-toggle[aria-expanded="true"] span:first-child {
-      transform: translateY(3.5px) rotate(45deg);
-    }
-
-  .menu-toggle[aria-expanded="true"] span:last-child {
-      transform: translateY(-3.5px) rotate(-45deg);
-    }
-
-  .menu-toggle:focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 2px;
-    }
-
   .navigation {
-      position: fixed;
-      z-index: 10;
-      top: var(--header-height);
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: clamp(40px, 10vw, 64px) var(--page-gutter);
-      overflow-y: auto;
-      background: var(--color-bg);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-8px);
-      transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease;
+      margin-left: auto;
     }
 
   .navigation ul {
-      display: grid;
-      width: 100%;
-      align-items: stretch;
-      gap: 0;
-    }
-
-  .navigation.is-open {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
+      display: flex;
+      gap: 12px;
     }
 
   .menu-link {
-      display: block;
-      padding-block: 16px;
-      border-bottom: 1px solid var(--color-border);
-      color: var(--color-text);
-      font-size: clamp(24px, 8vw, 34px);
-      font-weight: 500;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-    }
-
-  .menu-link::after {
-      right: auto;
-      bottom: 13px;
-      width: 28px;
-    }
-
-  body.menu-open {
-      overflow: hidden;
+      padding-block: 6px;
+      font-size: 12px;
     }
 
   .concept-lightbox {
@@ -571,5 +556,29 @@
   .site-footer-content {
     display: grid;
     gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    gap: 10px;
+  }
+
+  .logo {
+    max-width: 82px;
+    font-size: 10px;
+    line-height: 1.15;
+  }
+
+  .navigation ul {
+    gap: 5px;
+  }
+
+  .menu-link {
+    font-size: 11px;
+  }
+
+  .resume-link svg {
+    display: none;
   }
 }
